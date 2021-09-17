@@ -5,7 +5,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
-import 'image_model.dart';
+import 'package:pics/src/models/image_model.dart';
+import 'package:pics/src/widgets/image_list.dart';
+
 
 
 ///  define app class that extends *StatelessWidgets*
@@ -34,7 +36,7 @@ class AppState extends State<App> {
           },
           child: Icon(Icons.add),
         ),
-        body: Text("You have pressed $counter times "),
+        body: ImageList(imageList),
       ),
     );
   }
